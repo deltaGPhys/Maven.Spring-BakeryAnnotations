@@ -8,7 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-@Controller
+@RestController
 public class MuffinController {
 
     @Autowired
@@ -29,6 +29,7 @@ public class MuffinController {
     }
 
     @PostMapping("/muffins/")
+    //@RequestMapping(value = "/muffins/", method = RequestMethod.POST)
     public ResponseEntity<Muffin> create(@RequestBody Muffin muffin) {
         return new ResponseEntity<>(service.create(muffin), HttpStatus.CREATED);
     }

@@ -23,8 +23,8 @@ public class MuffinService {
         return repository.findById(id).get();
     }
 
-    public Muffin create(Muffin baker) {
-        return repository.save(baker);
+    public Muffin create(Muffin muffin) {
+        return repository.save(muffin);
     }
 
     public Muffin update(Long id, Muffin newMuffinData) {
